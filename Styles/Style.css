@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+12&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+12&family=VT323&display=swap');
+
+.jacquard-12-regular {
+  font-family: "Jacquard 12", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+  
+
+  *{
+      color-scheme: light dark;
+      font-family: "VT323", serif;
+      font-weight: 400;
+      font-style: normal;
+      color: light-dark(black, white);
+      font-size: medium;
+      background-color: light-dark(white, black);
+      image-rendering: pixelated;
+
+      button{
+        border-style: solid;
+        border-width: 3pt;
+        border-color: light-dark(black,white);
+        background-color: light-dark(lightgray,#555555);
+        height: fit-content;
+        width: 100%;
+      }
+      button:hover{
+        color: light-dark(#0000AA, #AA0000);
+        border-color: light-dark(#0000AA, #AA0000);
+      }
+      button:active{
+        color: light-dark(white, black);
+        background-color: light-dark(#0000AA, #AA0000);
+        border-color: light-dark(#0000AA, #AA0000);
+      }
+      button:focus{
+        border-color: light-dark(#AA5500FF, #ffff55);
+      }
+      .Active{
+        display: initial;
+      }
+      .Deactive{
+        display: none;
+      }
+      .Unavailable{
+        color: light-dar(lightgrey,#555555);
+        border-color: light-dark(lightgrey,#555555);
+        background-color: light-dark(white,black);
+      }
+      .Movement{
+        width: 40pt;
+        height: 40pt;
+      }
+      #Use{
+        background-color: light-dark(#55ffff,#0000AA);
+      }
+      #Inventory{
+        background-color: light-dark(#ffff55,#aa5500);
+      }
+      #giveUp{
+        background-color: light-dark(#ff5555,#AA0000);
+      }
+      #Observe{
+        background-color: light-dark(#55FF55, #00AA00);
+      }
+
+      dialoge{
+        position: absolute;
+        align-self: center;
+        padding: 16pt;
+        border-style: solid;
+        border-width: 3pt;
+        border-color: light-dark(black,white);
+        z-index: 2;
+      }
+      .Error{
+        color: light-dark(black,white);
+        background-color: light-dark(#ff5555,#AA0000);
+        z-index: 2;
+      }
+      .Quest{
+        color: light-dark(black,white);
+        background-color: light-dark(#ffff55,#aa5500);
+        z-index: 2;
+      }
+      .Complete{
+        color: light-dark(black,white);
+        border-color: light-dark(#55ff55,#00AA00);
+        z-index: 2;
+      }
+      .InventoryMenu{
+        position: absolute;
+        align-self: center;
+      }
+      .Warning{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: xx-large;
+        position: absolute;
+        align-self: center;
+        top: 20%;
+        gap: 12pt;
+        #confirmation{
+          background-color: light-dark(#ff5555,#AA0000);
+          display: flex;
+          flex-direction: row;
+          gap: 12px;
+        }
+      }
+      .ItemNotification{
+        display: flex;
+        align-items: center;
+        top: 20%;
+        gap: 12pt;
+        flex-direction: column;
+        #ItemPic{
+          width: 30%;
+        }
+      }
+      #Sarosa{
+        position: absolute;
+        align-self: center;
+        top: 30%;
+      }
+  }
+
+  header{
+    margin-bottom: 10pt;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    #topBarContent{
+      width: 30%;
+      display: flex;
+      flex-direction: row;
+    }
+  h1{
+      font-family: "Jacquard 12", system-ui;
+      font-weight: 400;
+      font-style: normal;
+      color: light-dark(#0000AA, #AA0000);
+      font-size: xx-large;
+  }
+}
+  body{
+    main{
+        align-items: center;
+        align-content: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: 3pt;
+
+        #Visuals{
+            width: 40%;
+        img{
+            width: 100%;
+        }
+        }
+        #Content{
+            width: 60%;
+            display: flex;
+            flex-direction: row;
+            gap: 12pt;
+            justify-content: space-between;
+            align-content: space-between;
+            flex-wrap: nowrap;
+            align-items: center;
+
+        #Description{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            width: 50%;
+            h2{
+                font-family: "Jacquard 12", system-ui;
+                font-weight: 400;
+                font-style: normal;
+                font-size: x-large;
+                color: light-dark(#0000AA, #AA0000);
+                border-style: solid ;
+                border-color: light-dark(black,white);
+                border-width: 3pt;
+                border-bottom: 0;
+                width:fit-content;
+                padding: 3pt;
+                margin-bottom: 0;
+            }
+            p{
+                margin-top: 0;
+                border-style: solid ;
+                border-color: light-dark(black,white);
+                border-width: 3pt;
+                padding: 3pt;
+            }
+        }
+        #Controlls{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            gap: 12pt;
+            width: 50%;
+            #Movement{
+                width: 100%;
+                display: flex;
+                flex-direction: column; 
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+                gap: 1pt;
+                #MidRow{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 1pt;
+                    justify-content: space-between;
+                    flex-wrap: nowrap;
+                }             
+            }
+            #Actions{
+                border-style: solid;
+                border-width: 3pt;
+                padding: 1pt;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                gap: 1pt;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            
+             }
+            }
+    }
+    }
+
+
+    footer{
+        margin-top: 12pt;
+        align-self: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: fit-content;
+        padding-left: 10pt;
+        padding-right: 10pt;
+        gap: 12pt;
+        align-items: center;
+        background-color: light-dark(black,white);
+
+        p{
+            color: light-dark(white,black);
+            background-color: light-dark(black,white);
+            font-size: small;
+        }
+        #calanderDate{
+            color: light-dark(white,black);
+            background-color: light-dark(black,white);
+            font-size: x-small;
+        }
+    }
+}
+
+@media only screen and (max-width: 1800px){
+    Body{
+        main{
+            #Content{
+                #Controlls{
+                    flex-direction: column-reverse;
+                }
+            }
+        }
+    }
+  }
+
+  @media only screen and (max-width: 1280px){
+    Body{
+        main{
+            flex-direction: column;
+            flex-wrap: wrap;
+            #Visuals{
+            width:50%;
+            }
+            #Content{
+                width: 99%;
+                #Description{
+                    width: 50%;
+                }
+                #Controlls{
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+  }
+
+  @media only screen and (max-width: 682px){
+    header{
+      flex-direction: column-reverse;
+      #topBarContent{
+        width: 100%;
+      }
+    }
+    Body{
+        main{
+            flex-direction: column;
+            #Visuals{
+                width: 100%;
+            }
+            #Content{
+                #Description{
+                width: 100%;
+                }
+                flex-direction: column;
+                #Controlls{
+                    width: 100%;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                }
+            }
+        }
+    }
+  }
+
+        @media (prefers-color-scheme: light){
+    *{
+        img{
+                filter: invert(1);
+        }
+    }
+}
