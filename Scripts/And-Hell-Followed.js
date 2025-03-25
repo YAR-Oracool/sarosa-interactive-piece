@@ -307,6 +307,12 @@ function Warn(choice){
             case 2:
                 window.location.href="Death.html";
                 break;
+            case 3:
+                window.location.href="https://daena-at-the-bridge-a34a36.gitlab.io/"
+                break;
+            case 4:
+                window.location.href="About.html"
+                break;
             default:
                 clearAlert();
                 break;
@@ -488,7 +494,7 @@ const Map = [[],[],[]]
 
 Map[0][1]= new Sector('Cathedral','01', 'A cathedral with 3 windows with images of wrenches, scales and people on it.', 'The cathedral is center of sharing. We do something and we get soemthing in return. The bedestool infront of teh church invite syou to play tik tak toe.');
 Map[1][1]= new Sector('Forest','11', 'A dark forest with a campifre in it', 'In the dark night the forest gives you comfort. There are 2 doors infront of you. Where do they lead?');
-Map[2][1]= new Sector('River','21', 'A dark forest with a campifre in it', 'In the dark night the forest gives you comfort. There are 2 doors infront of you. Where do they lead?');
+Map[2][1]= new Sector('River','21', 'A dark forest with a campifre in it', 'Under the moon light a group of people have gathered around a rviver. Water is life. Life can be shared but so can death.');
 
 window.onload = function (){
     if(ShowCase == true){
@@ -584,6 +590,14 @@ document.getElementById('toTitle').addEventListener('click', function(){
 
 document.getElementById('toCredits').addEventListener('click', function(){
     Warn(1);
+});
+
+document.getElementById('toAbout').addEventListener('click', function(){
+    Warn(4);
+});
+
+document.getElementById('toProfolio').addEventListener('click', function(){
+    Warn(3);
 });
 
 //Keyboard input assignment

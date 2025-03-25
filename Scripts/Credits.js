@@ -12,8 +12,24 @@ function summonGame(){
     window.location.href="../index.html";
 }
 
-document.getElementById("ToGame").addEventListener('click', function(){
+function summonAbout(){
+    window.location.href="../HTML/About.html"
+}
+
+function summonProfolio(){
+    window.location.href="https://daena-at-the-bridge-a34a36.gitlab.io/"
+}
+
+document.getElementById("toGame").addEventListener('click', function(){
     summonGame();
+})
+
+document.getElementById("toAbout").addEventListener('click', function(){
+    summonAbout();
+})
+
+document.getElementById("toProfolio").addEventListener('click', function(){
+    summonProfolio();
 })
 
 
@@ -21,6 +37,14 @@ window.addEventListener('keydown', function(keyPress){
     switch (keyPress.key){
         case 'Enter':
             summonGame();
+            break;
+        case 'K':
+        case 'k':
+            summonAbout();
+            break;
+        case 'L':
+        case 'l':
+            summonProfolio();
             break;
     }
 });
