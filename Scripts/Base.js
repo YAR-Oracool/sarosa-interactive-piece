@@ -8,7 +8,7 @@ function summonCredits(){
 }
 
 function summonAbout(){
-    window.location.href="../HTML/About.html"
+    window.location.href="HTML/About.html"
 }
 
 function summonProfolio(){
